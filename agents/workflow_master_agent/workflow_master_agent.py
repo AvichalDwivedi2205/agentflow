@@ -18,8 +18,7 @@ from .tools import (
     execution_coordinator_tool,
     realtime_broadcast_tool
 )
-
-# Import sub-agents (will be created)
+# Importing the core agents which are used in the workflow master agent
 from ..conversation_parser_agent.conversation_parser_agent import conversation_parser_agent
 from ..agent_factory_agent.agent_factory_agent import agent_factory_agent
 from ..execution_coordinator_agent.execution_coordinator_agent import execution_coordinator_agent
@@ -34,7 +33,6 @@ async def setup_workflow_master_callback(callback_context: CallbackContext):
     if not supabase_manager._connected:
         await supabase_manager.connect_realtime()
     
-    # Set up global state management
     if "global_state" not in callback_context.state:
         callback_context.state["global_state"] = {
             "session_id": f"session_{datetime.now().strftime('%Y%m%d_%H%M%S')}",
