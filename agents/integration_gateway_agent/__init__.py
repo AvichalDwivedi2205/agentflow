@@ -1,0 +1,1 @@
+# IntegrationGatewayAgent - External service integration with MCP protocol support 

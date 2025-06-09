@@ -1,0 +1,36 @@
+# Google AI Studio / Gemini Configuration
+GOOGLE_API_KEY=your_google_api_key_here
+GOOGLE_PROJECT_ID=your_google_project_id
+GOOGLE_LOCATION=us-central1
+
+# Supabase Configuration
+SUPABASE_URL=your_supabase_url_here
+SUPABASE_ANON_KEY=your_supabase_anon_key_here
+SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key_here
+
+# WorkOS Authentication (if applicable)
+WORKOS_API_KEY=your_workos_api_key_here
+WORKOS_CLIENT_ID=your_workos_client_id_here
+
+# Agent Configuration
+ROOT_AGENT_MODEL=gemini-1.5-pro-002
+AGENT_TEMPERATURE=0.1
+MAX_TOKENS=8192
+
+# MCP Server Configuration
+MCP_SERVER_PORT=3000
+MCP_SERVER_HOST=localhost
+
+# FastAPI Configuration
+API_HOST=0.0.0.0
+API_PORT=8000
+DEBUG=true
+
+# Logging Configuration
+LOG_LEVEL=INFO
+LOG_FORMAT=json
+
+# Production Configuration
+ENVIRONMENT=development
+REDIS_URL=redis://localhost:6379
+DATABASE_URL=postgresql://localhost:5432/agentflow 
